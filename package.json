@@ -1,0 +1,13 @@
+{
+  "name": "namma-care-ai",
+  "private": true,
+  "version": "1.0.0",
+  "workspaces": ["frontend", "backend"],
+  "scripts": {
+    "dev": "concurrently -k \"npm run dev -w backend\" \"npm run dev -w frontend\"",
+    "build": "npm run build -w frontend && npm run check -w backend",
+    "test": "npm run test -w backend",
+    "setup": "npm install"
+  },
+  "devDependencies": {"concurrently": "^9.1.2"}
+}
